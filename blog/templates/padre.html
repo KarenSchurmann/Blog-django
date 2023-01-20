@@ -17,7 +17,7 @@
                     <nav class="navbar navbar-light">
                         <div class="container-fluid">
                             <div class="navbar-header">
-                                <a class="navbar-brand" href="#">RECETUKIS</a>
+                                <a class="navbar-brand" href="">RECETUKIS</a>
                             </div>
                         </div>
                  
@@ -27,7 +27,6 @@
                         {% if user.is_authenticated %}      
                         <ul class="nav navbar-nav">
                             <li class="active"><a href="{% url 'inicio' %}">Inicio</a></li>
-                            <li class="active"><a href="{% url 'logout' %}">Cerrar sesion</a></li>
                             <li class="active"><a href="{% url 'user_profile' %}">Mi perfil</a></li>
                             <li class="dropdown">
                                 <a class="dropdown-toggle" data-toggle="dropdown" href="{% url 'all_posts' %}">Recetas<span class="caret"></span></a>
@@ -67,21 +66,19 @@
                             </div>
                         </form> 
                     </nav>
-                </body>
-            </html>
                 </div>
             </div>
         </div>
     
         
 
-<!-- Page Header-->
-{% block encabezado %}
-{% endblock  %}
-<!-- Main Content-->
-{% block contenido %}
-{% endblock  %}
-<!-- Footer-->
+        <!-- Page Header-->
+        {% block encabezado %}
+        {% endblock  %}
+        <!-- Main Content-->
+        {% block contenido %}
+        {% endblock  %}
+        <!-- Footer-->
         <footer class="border-top">
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
