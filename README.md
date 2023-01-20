@@ -1,4 +1,4 @@
-﻿# Blog-django
+﻿# RecipesBlog
 Blog de recetas de cocina desarrollado por Karen Schurmann, como proyecto final para Coderhouse.
 
 Para la creacion de esta pagina web, se utilizo el framework de python-Django junto con algunas herramientas de html, css y javascript.
