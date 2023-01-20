@@ -4,8 +4,6 @@ Blog de recetas de cocina desarrollado por Karen Schurmann, como proyecto final 
 Para la creacion de esta pagina web, se utilizo el framework de python-Django junto con algunas herramientas de html, css y javascript.
 Ademas, se utilizaron plantillas html que se descargaron de la pagina "w3schools", "bootstrap" y se modificaron para adaptarlas a las necesidades de la web.
 
-Asimismo, para realizar pruebas, se puede usar el usuario 'admin' cuya contraseña es igual al usuario para entrar al panel de administracion de django y crear o modificar objetos en la base de datos.
-
 Funcionamiento:
 
 Al ejecutar el comando manage.py runserver se inicia el servidor en el localhost de la pc, en el puerto 8000 por defecto.
