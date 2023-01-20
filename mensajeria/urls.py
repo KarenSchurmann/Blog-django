@@ -8,7 +8,6 @@ from django.contrib.auth.views import LogoutView
 urlpatterns = [
     path("mensajeFormulario", mensajeFormulario , name = "mensajeFormulario"),
     path("mensajeUsuarios", mensajeUsuarios , name = "mensajeUsuarios"),
-
     path("leerMensaje", leerMensaje , name = "leerMensaje"),
     path("enviadoMensaje", enviadoMensaje , name = "enviadoMensaje"),
 ]
