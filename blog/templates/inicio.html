@@ -1,0 +1,127 @@
+{% extends "padre.html" %}
+{% load static %}
+
+{% block encabezado %}
+    <!-- Page Header -->
+    <!DOCTYPE html>
+        <html lang="en">
+            <head>
+                <title>RECETUKIS</title>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                <style>
+                    /* Style the body */
+                    body {
+                    font-family: Arial;
+                    margin: 0;
+                    }
+
+                    /* Header/Logo Title */
+                    .header {
+                    padding: 60px;
+                    text-align: center;
+                    background: #1abc9c;
+                    color: white;
+                    font-size: 30px;
+                    }
+
+                    /* Page Content */
+                    .content {padding:20px;}
+                </style>
+            </head>
+        <body>
+
+            <div class="header">
+                <h1>¡Bienvenidos!</h1>
+                <p>En este blog podran encontrar esas recetas que siempre dije que iba a pasar, pero nunca pase. Y quizas algunas mas..</p>
+            </div>
+
+        </body>
+    </html>
+
+{% endblock %}
+
+{% block contenido %}
+<!-- Main Content-->
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <!-- Post 1 preview-->
+                <br>
+                <div class="post-preview">
+                    {% if blog_1 %}
+                    <a href="{% url 'post' blog_1.id %}">
+                        <h2 class="post-title">{{ blog_1.titulo }}</h2>
+                        <h4 class="post-subtitle">{{ blog_1.subtitulo }}</h3>
+                    </a>
+                    <p class="post-meta">
+                        Publicado por {{ blog_1.autor }}
+                        en {{ blog_1.fecha}}
+                    </p>
+                    {% else %}
+                    <h2 class="post-title">Aún no hay entradas para mostrar</h2>
+                    {% endif %}
+                </div>
+                <!-- Divider-->
+                <hr class="my-4" />
+                <!-- Post 2 preview-->
+                <div class="post-preview">
+                    {% if blog_2 %}
+                    <a href="{% url 'post' blog_2.id %}">
+                        <h2 class="post-title">{{ blog_2.titulo }}</h2>
+                        <h4 class="post-subtitle">{{ blog_2.subtitulo }}</h3>
+                    </a>
+                    <p class="post-meta">
+                        Publicado por {{ blog_2.autor }}
+                        en {{ blog_2.fecha}}
+                    </p>
+                    {% else %}
+                    <h2 class="post-title">Aún no hay entradas para mostrar</h2>
+                    {% endif %}
+                </div>
+                <!-- Divider-->
+                <hr class="my-4" />
+                <!-- Post 3 preview-->
+                <div class="post-preview">
+                    {% if blog_3 %}
+                    <a href="{% url 'post' blog_3.id %}">
+                        <h2 class="post-title">{{ blog_3.titulo }}</h2>
+                        <h4 class="post-subtitle">{{ blog_3.subtitulo }}</h3>
+                    </a>
+                    <p class="post-meta">
+                        Publicado por {{ blog_3.autor }}
+                        en {{ blog_3.fecha}}
+                    </p>
+                    {% else %}
+                    <h2 class="post-title">Aún no hay entradas para mostrar</h2>
+                    {% endif %}
+                </div>
+                <!-- Divider-->
+                <hr class="my-4" />
+                <!-- Post 4 preview-->
+                <div class="post-preview">
+                    {% if blog_4 %}
+                    <a href="{% url 'post' blog_4.id %}">
+                        <h2 class="post-title">{{ blog_4.titulo }}</h2>
+                        <h4 class="post-subtitle">{{ blog_4.subtitulo }}</h3>
+                    </a>
+                    <p class="post-meta">
+                        Publicado por {{ blog_4.autor }}
+                        en {{ blog_4.fecha}}
+                    </p>
+                    {% else %}
+                    <h2 class="post-title">Aún no hay entradas para mostrar</h2>
+                    {% endif %}
+                </div>
+                <!-- Divider-->
+                <hr class="my-4" />
+                <!-- Pager-->
+                <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="{% url 'all_posts' %}">Ver todas →</a></div>
+            </div>
+        </div>
+    </div>
+{% endblock  %}
+
+{% block avatar %}
+<img src= "{{ avatar }}" width="50">
+{% endblock %}

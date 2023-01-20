@@ -1,0 +1,58 @@
+{% extends "padre.html" %}
+{% load static %}
+
+{% block encabezado %}
+    <!-- Page Header-->
+
+ <!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <title>RECETUKIS</title>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <style>
+            /* Style the body */
+            body {
+            font-family: Arial;
+            margin: 0;
+            }
+
+            /* Header/Logo Title */
+            .header {
+            padding: 60px;
+            text-align: center;
+            background: #1abc9c;
+            color: white;
+            font-size: 30px;
+            }
+
+            /* Page Content */
+            .content {padding:20px;}
+            </style>
+        </head>
+        <body>
+
+            <div class="header">
+                <h1>RECETUKIS</h1>
+                <p></p>
+            </div>
+
+            <div class="content">
+                <h1>Contenido</h1>
+                <p>Este maravilloso blog fue creado para responder a la problematica mas comun en un grupo de amigos (bueno, no la mas comun): pasar las recetas.</p>
+                <p>Invito a todos mis amigos y amigas a subir esas recetas que todos amamos que cocinen.</p>
+            </div>
+            <div class="content">
+                <h1>Sobre mi:</h1>
+                <p>Mi nombre es Karen, mas conocida como Kai, Kaisho, la chica que hace los cuadraditos de limon.</p>
+                <p>Estoy metiendome en el mundo de la programacion, y este es mi primer proyecto "de verdad"</p>
+              </div>
+        </body>
+    </html>
+
+{% endblock %}
+
+
+{% block avatar %}
+    <img src= "{{ avatar }}" width="50">
+{% endblock %}
